@@ -1,0 +1,27 @@
+h1 {
+    color: var(--secondary-text)
+}
+
+.items-grid {
+    display: grid;
+    width: 80%;
+    height: 100%;
+    grid-template-columns: repeat( auto-fit, minmax(20em, 1fr) );
+}
+.item{
+    width:20em;
+    height: 35em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: var(--secondary-text) -3px 3px 6px 0px
+}
+.item img{
+    border-radius: 15px 15px 0 0;
+}
+.price{
+    margin-top:auto;
+}

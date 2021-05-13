@@ -1,0 +1,62 @@
+<html lang="html">
+<head>
+    <title>The Red Flower</title>
+    <link rel="stylesheet" href="css/element.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/basket.css"/>
+    <script src="js/listLoader.js"></script>
+    <script src="js/actions.js"></script>
+    <script src="js/manage.js"></script>
+    <meta charset="utf-8">
+</head>
+<body onload="setBasketName();">
+<nav>
+    <div class="pages">
+        <a href="index.html">Home</a>
+        <a href="store.html">Store</a>
+        <a href="manage.html">Manage</a>
+        <a href="basket.html" style="display: flex;flex-direction: column; margin-left: auto">
+            <img class="icon" src="img/basket.png" alt="Basket"/>
+            <p style="margin: 0" id="basket"></p>
+        </a>
+    </div>
+</nav>
+
+<div class="page-container">
+    <h1>Manage your store</h1>
+    <div style="display: flex">
+
+        <div class="element-container">
+            <h2 style="text-align: center">Add new item</h2>
+            <label class="flower-input">
+                <text>Name</text>
+                <input id="name" placeholder="Flower Circle"></label>
+            <label class="flower-input">
+                <text>Price</text>
+                <input id="price" placeholder="5.5"></label>
+            <label class="flower-input">
+                <text>Tag</text>
+                <input id="tag" placeholder="Example Tag"></label>
+            <label class="flower-input">
+                <text>Picture</text>
+                <input id="file" type="file" placeholder="Example Tag"></label>
+            <button style="margin-top:10px" class="store-button" onclick="addItem()">Add Item</button>
+        </div>
+
+        <div class="element-container" style="margin-left: 15px">
+            <h2 style="text-align: center">Delete item</h2>
+            <label class="flower-input">
+                <text>Name</text>
+                <input id="itemname" placeholder="Flower Circle"></label>
+            <button style="margin-top:10px" class="store-button" onclick="deleteItem()">Delete</button>
+            <button style="margin-top:10px" class="store-button" onclick="deleteItems()">Reset to Default</button>
+        </div>
+    </div>
+</div>
+<footer style="width: 100%; background: gray;margin-top:auto; text-align: center">
+    <a href="mailto:sultanguvenbas@gmail.com" id="link">
+        Contact me via email
+    </a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.flower-input {
+    width: fit-content;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.flower-select {
+    text-align-last: center;
+}
+.flower-select select{
+    border: 1px solid var(--secondary-text);
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: 0 0 5px 0 var(--secondary-text);
+    margin-bottom: 5px;
+}
+.flower-select select option{
+    border: 1px solid var(--secondary-text);
+    border-radius: 5px;
+    width: 80%;
+}
+.flower-input text {
+    margin-left: 8px;
+}
+
+.flower-input, .flower-input * {
+    color: var(--secondary-text);
+    font-weight: 900;
+}
+
+.flower-input input {
+    background: var(--secondary);
+    border: solid var(--secondary-text) 2px;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+    box-shadow: 0 0 0 0 var(--secondary-text);
+    transition-duration: 0.4s;
+    margin: 5px;
+}
+
+.flower-input input:hover, .flower-input input:focus {
+    box-shadow: 0 0 10px 0 var(--secondary-text);
+}
+
+.element-container {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: var(--secondary-text) 0 0 5px 2px;
+}

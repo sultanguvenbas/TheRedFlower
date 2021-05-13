@@ -1,0 +1,36 @@
+h1 {
+    color: var(--secondary-text)
+}
+
+.item {
+    display: flex;
+    background-color: var(--secondary);
+    height: 10em;
+    width: 45em;
+    box-shadow: 0 0 5px 2px var(--secondary-text);
+    border-radius: 15px;
+    margin: 10px 5px 1em;
+}
+
+.item img {
+    height: 10em;
+    border-radius: 15px 0 0 15px;
+}
+.item-texts{
+    margin-left: 1em;
+}
+.item-nums{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 1em;
+    justify-content: center;
+}
+.store-button{
+    padding-left: 2.2em;
+    margin-bottom: 0;
+    padding-right: 2.2em;
+}
+.cart-list{
+    overflow-y: auto;
+}
