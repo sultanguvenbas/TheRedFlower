@@ -9,12 +9,12 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    font-family: "JetBrains Mono";
+    font-family: "JetBrains Mono", serif;
 }
 
 nav {
     display: flex;
-    background-color: var(--secondary);
+    background: var(--secondary);
     box-shadow: black 0 0 5px 0;
     margin-bottom: 0.5em;
 }
@@ -33,9 +33,47 @@ nav .pages a {
     font-size: 1.5em;
     text-decoration: none;
     transition: color, background-color 0.3s ease-in-out;
+    background:linear-gradient(var(--secondary), rgba(255, 255, 255, 0));
 }
 
 nav .pages a:hover {
+    color: var(--secondary);
+    background-color: var(--secondary-text);
+}
+.search-product{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+#search{
+    width: 30em;
+    background: var(--secondary);
+    border: solid var(--secondary-text) 2px;
+    border-radius: 10px;
+    padding: 0.5em;
+    outline: none;
+}
+
+.search-product input:hover, .search-product input:focus {
+    box-shadow: 0 0 10px 0 var(--secondary-text);
+}
+
+.search-button{
+    background: var(--secondary);
+    border: solid var(--secondary-text) 2px;
+    align-self: center;
+    transition: all 0.12s ease-in-out;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-left: 1px;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-button:hover {
     color: var(--secondary);
     background-color: var(--secondary-text);
 }
