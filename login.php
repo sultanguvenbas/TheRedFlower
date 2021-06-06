@@ -22,7 +22,7 @@
         else
             echo "<a href=\"actions/logout.php\" id=\"logoutLink\">Logout</a>"
         ?>
-        <p id="welcomeName"><?php if (isset($_COOKIE['login'])) echo "Welcome, " . $_COOKIE['login']; ?></p>
+        <p  class="welcome" id="welcomeName"><?php if (isset($_COOKIE['login'])) echo "Welcome, " . $_COOKIE['login']; ?></p>
         <a href="basket.php" style="display: flex;flex-direction: column; margin-left: auto">
             <img class="icon"
                  src="img/basket.png"
@@ -42,6 +42,16 @@
             <input type="text" id="username" name="username" placeholder="Enter Username" required>
             <label class="password" for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            <input id='itemsArray' name='itemsArray' style='display: none'  />
+            <script>document.getElementById('itemsArray').value=JSON.stringify(cart)</script>
+            <label>
+                Please Select your type:
+                <select>
+                    <option >Costumer</option>
+                    <option >Admin</option>
+                </select>
+            </label>
+
 
             <button formaction="actions/loginCheck.php">Login</button>
             <a href="#">Forget your password?</a>

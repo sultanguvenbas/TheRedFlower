@@ -24,7 +24,7 @@ nav .pages {
     width: 100%;
 }
 
-nav .pages a {
+nav .pages a{
     flex: 1;
     max-width: 6em;
     display: flex;
@@ -40,44 +40,6 @@ nav .pages a:hover {
     color: var(--secondary);
     background-color: var(--secondary-text);
 }
-.search-product{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-}
-
-#search{
-    width: 30em;
-    background: var(--secondary);
-    border: solid var(--secondary-text) 2px;
-    border-radius: 10px;
-    padding: 0.5em;
-    outline: none;
-}
-
-.search-product input:hover, .search-product input:focus {
-    box-shadow: 0 0 10px 0 var(--secondary-text);
-}
-
-.search-button{
-    background: var(--secondary);
-    border: solid var(--secondary-text) 2px;
-    align-self: center;
-    transition: all 0.12s ease-in-out;
-    border-radius: 10px;
-    padding: 0.5em;
-    margin-left: 1px;
-    outline: none;
-    cursor: pointer;
-}
-
-.search-button:hover {
-    color: var(--secondary);
-    background-color: var(--secondary-text);
-}
-
 .page-container {
     width: 100%;
     display: flex;
@@ -129,4 +91,48 @@ nav .pages a:hover {
 }
 #link:hover{
     text-shadow: var(--secondary) -2px 2px 3px;
+}
+.pages .welcome{
+    flex: 1;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F17921;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.search input{
+    background: var(--secondary);
+    border: solid var(--secondary-text) 2px;
+    border-radius: 10px;
+    padding: 6px;
+    outline: none;
+    box-shadow: 0 0 0 0 var(--secondary-text);
+    transition-duration: 0.4s;
+
+}
+.search input:hover{
+    box-shadow: 0 0 10px 0 var(--secondary-text);
+}
+.search button{
+    border: none;
+
+    box-shadow: var(--secondary-text) 0 0 0 2px;
+    background-color: var(--secondary);
+    align-self: center;
+    transition: all 0.12s ease-in-out;
+    border-radius: 11px;
+    padding: 0.5em;
+    outline: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.search button:hover{
+    color: var(--secondary);
+    background-color: var(--secondary-text);
 }

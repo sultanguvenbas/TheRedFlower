@@ -24,7 +24,13 @@
         else
             echo "<a href=\"actions/logout.php\" id=\"logoutLink\">Logout</a>"
         ?>
-        <p id="welcomeName"><?php if (isset($_COOKIE['login'])) echo "Welcome, " . $_COOKIE['login']; ?></p>
+        <p class="welcome" id="welcomeName"><?php if (isset($_COOKIE['login'])) echo "Welcome, " . $_COOKIE['login']; ?></p>
+
+        <form method="post" class="search">
+            <input name="search" placeholder="Search..."/>
+            <button formaction="searchItem.php">Search</button>
+        </form>
+
         <a href="basket.php" style="display: flex;flex-direction: column; margin-left: auto">
             <img class="icon"
                  src="img/basket.png"

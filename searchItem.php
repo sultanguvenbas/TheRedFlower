@@ -31,13 +31,13 @@
 
         <a href="basket.php"
            style="display: flex;flex-direction: column; margin-left: auto"><img
-                    class="icon" src="img/basket.png" alt="Basket"/>
+                class="icon" src="img/basket.png" alt="Basket"/>
             <p style="margin: 0" id="basket"></p></a>
     </div>
 </nav>
 
 <div class="page-container">
-    <h1 style="display: block">Flowers</h1>
+    <h1 style="display: block">Search</h1>
 
     <div id="itemsGrid" class="items-grid">
         <?php
@@ -45,18 +45,26 @@
         $username = "root";
         $password = "";
         $connection = new PDO("mysql:host=$servername;dbname=theredflower", $username, $password);
-        $items = $connection->query("SELECT * FROM items_table where category='flower'");
-        //echo $items;
+        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        foreach ($items->fetchAll() as $item) {
-            echo "<form class='item' method='post'>"
-                . "<input name='itemId' style='display: none' value='$item[0]' />"
-                . "<img src='/img/$item[1].png' alt='pic'/>"
-                . "<h3>$item[1]</h3>"
-                . "<h4 style='margin:0'>$item[2]</h4>"
-                . " <h3 class='price'>$item[3],00 $</h3>"
-                . "<button class='store-button' formaction='actions/addToBasket.php'>Add to basket</button>"
-                . "</form>";
+
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $connection = new PDO("mysql:host=$servername;dbname=theredflower", $username, $password);
+            $searchItem = $_POST['search'];
+
+            $items = $connection->query("SELECT * FROM items_table WHERE MATCH(`name`) AGAINST('$searchItem')");
+
+            foreach ($items->fetchAll() as $item) {
+                echo "<form class='item' method='post'>"
+                    . "<input name='itemId' style='display: none' value='$item[0]' />"
+                    . "<img src='/img/$item[1].png' alt='pic'/>"
+                    . "<h3>$item[1]</h3>"
+                    . "<h4 style='margin:0'>$item[2]</h4>"
+                    . " <h3 class='price'>$item[3],00 $</h3>"
+                    . "<button class='store-button' formaction='actions/addToBasket.php'>Add to basket</button>"
+                    . "</form>";
+            }
+
         }
         ?>
     </div>
