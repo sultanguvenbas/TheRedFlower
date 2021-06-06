@@ -28,7 +28,7 @@ session_start();
         ?>
 
 
-        <p id="welcomeName"><?php if (isset($_COOKIE['login'])) echo "Welcome, " . $_COOKIE['login']; ?></p>
+        <p class="welcome" id="welcomeName"><?php if (isset($_COOKIE['login'])) echo "Welcome, " . $_COOKIE['login']; ?></p>
 
         <a href="basket.php" style="display: flex;flex-direction: column; margin-left: auto">
             <img class="icon"
@@ -37,6 +37,7 @@ session_start();
             <p style="margin: 0" id="basket"></p></a>
     </div>
 </nav>
+
 
 <div class="page-container">
     <h1>Welcome to The Red Flower Store!</h1>

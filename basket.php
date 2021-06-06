@@ -24,7 +24,7 @@
         else
             echo "<a href=\"actions/logout.php\" id=\"logoutLink\">Logout</a>"
         ?>
-        <p id="welcomeName"><?php if (isset($_COOKIE['login'])) echo "Welcome, " . $_COOKIE['login'];  ?></p>
+        <p class="welcome" id="welcomeName"><?php if (isset($_COOKIE['login'])) echo "Welcome, " . $_COOKIE['login'];  ?></p>
         <a href="basket.php" style="display: flex;flex-direction: column; margin-left: auto">
                <a href="basket.php" style="display: flex;flex-direction: column; margin-left: auto">
             <img class="icon"
@@ -38,12 +38,12 @@
 <div class="page-container">
     <h1 id="nothing" class="styled-box">YOU HAVE NOTHING IN YOUR CART HOORAYY!</h1>
     <div class="cart-list" id="cartList">
+
     </div>
     <div class="cart-item">
-        <h1 style="text-align: center" id="totalText">Your Total: $123,00</h1>
+        <h1 style="text-align: center" id="totalText"></h1>
         <div style="display: flex">
-            <button class="store-button" onclick="window.location='index.html'" style="width: 13em;">Continue shopping
-            </button>
+            <button class="store-button" onclick="window.location='index.html'" style="width: 13em;">Continue shopping</button>
             <button id="purchase-button" class="store-button" style="margin-left: 1em; width: 13em"
                     onclick="purchase()">Purchase now
             </button>

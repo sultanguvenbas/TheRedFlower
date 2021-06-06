@@ -43,9 +43,12 @@ function saveProducts() {
 //saving local
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
-  setBasketName()
-  if (loadBasketItems)
-    loadBasketItems();
+  try{
+    setBasketName()
+    if (loadBasketItems)
+      loadBasketItems();
+  }catch(e){
+  }
 }
 
 

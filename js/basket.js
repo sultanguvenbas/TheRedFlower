@@ -15,9 +15,12 @@ function loadBasketItems() {
                 <h3 class="price">$${item.price},00</h3>
             </div>
             <div class="item-nums">
-                <button class="store-button" onClick="removeFromCart(${i})">-</button>
+            <form method='post'>
+                <input name='itemId' style='display: none' value='${item.id}'/>
+                <button class="store-button" formaction='actions/removeFromBasket.php'>-</button>
                 <h3 style="margin:0.5em">Amount: ${item.inCart}</h3>
-                <button class="store-button" onClick="addToCart('${item.name}')">+</button>
+                <button class="store-button"  formaction='actions/addToBasket.php'>+</button>
+            </form>
             </div>
         </div>
     `
