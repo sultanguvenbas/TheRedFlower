@@ -84,10 +84,12 @@
         <label name="wiretransfer" style="display: none" class="flower-input">
             <text>SWIFT Code</text>
             <input placeholder="3FJ4GD" maxlength="11"></label>
-        <button style="margin-top:10px" class="store-button"
-                onclick="localStorage.removeItem('cart'); alert('Purchase successful!'); window.location.reload()">
-            Submit
-        </button>
+
+        <form method="POST" action="actions/purchase.php">
+          <button style="margin-top:10px" class="store-button">
+              Submit
+          </button>
+      </form>
     </div>
 
 </div><footer style="width: 100%; background: gray;margin-top:auto; text-align: center">
